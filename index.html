@@ -63,15 +63,27 @@
     <body cz-shortcut-listen="true">
         <div id="root">
             <div class="relative h-screen w-full overflow-y-auto overflow-x-hidden">
-                <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url(/assets/background.avif);"></div>
+                <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url(/assets/background.png); background-image: url(/assets/background.avif);"></div>
                 <div class="relative z-10 flex min-h-full flex-col items-center justify-center px-0 md:px-4 py-6 md:py-8">
                     <div class="flex-shrink-0 mb-8 md:mb-12 lg:mb-16">
-                        <img src="/assets/logo.avif" alt="Ugly Friends • Coming Soon" class="h-auto w-44 sm:w-48 md:w-52 lg:w-64 max-h-[15vh] object-contain">
+                        <picture>
+                            <source srcset="/assets/logo.avif" type="image/avif">
+                            <img src="/assets/logo.png" alt="Ugly Friends • Coming Soon" class="h-auto w-44 sm:w-48 md:w-52 lg:w-64 max-h-[15vh] object-contain">
+                        </picture>
                     </div>
                     <div class="relative w-full flex justify-center items-end max-w-full sm:max-w-3xl md:max-w-5xl mx-auto flex-shrink mb-4 md:mb-6">
-                        <img src="/assets/characters-back.avif" alt="Background characters" class="z-10 slide-back max-h-[40vh] md:max-h-[45vh] object-contain">
-                        <img src="/assets/characters-middle.avif" alt="Middle layer characters" class="absolute z-20 slide-middle max-h-[40vh] md:max-h-[45vh] object-contain">
-                        <img src="/assets/characters-front.avif" alt="Main character - Pink pig with cap" class="absolute z-30 slide-front max-h-[40vh] md:max-h-[45vh] object-contain">
+                        <picture class="z-10 slide-back">
+                            <source srcset="/assets/characters-back.avif" type="image/avif">
+                            <img src="/assets/characters-back.png" alt="Background characters" class="max-h-[40vh] md:max-h-[45vh] object-contain">
+                        </picture>
+                        <picture class="absolute z-20 slide-middle">
+                            <source srcset="/assets/characters-middle.avif" type="image/avif">
+                            <img src="/assets/characters-middle.png" alt="Middle layer characters" class="max-h-[40vh] md:max-h-[45vh] object-contain">
+                        </picture>
+                        <picture class="absolute z-30 slide-front">
+                            <source srcset="/assets/characters-front.avif" type="image/avif">
+                            <img src="/assets/characters-front.png" alt="Main character - Pink pig with cap" class="max-h-[40vh] md:max-h-[45vh] object-contain">
+                        </picture>
                     </div>
                     <div class="relative z-20 w-full max-w-3xl px-4 flex-shrink-0 mb-6 md:mb-8">
                         <form action="https://app.kit.com/forms/8927290/subscriptions" class="seva-form formkit-form" method="post">
