@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ugly Friends • Coming Soon</title>
+        <meta name="description" content="Ugly Friends • Coming soon. Sign up to be notified!">
+        <meta name="author" content="Ugly Friends">
+
+        <meta property="og:title" content="Ugly Friends • Coming Soon">
+        <meta property="og:description" content="Coming soon. Sign up to be notified!">
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="https://uglyfriends.ai/assets/share.png">
+
+        <link rel="icon" type="image/png" href="/assets/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+        <link rel="shortcut icon" href="/assets/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+        <link rel="manifest" href="/assets/site.webmanifest" />
+
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@UglyFriends">
+        <meta name="twitter:image" content="https://uglyfriends.ai/assets/share.png">
+
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com/">
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+        <link href="/assets/css2" rel="stylesheet">
+        <link rel="stylesheet" crossorigin="" href="/assets/index.css">
+        
+        <style>
+            @keyframes slideDown {
+                from {
+                    transform: translateY(-100px);
+                    opacity: 0;
+                }
+                to {
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+            }
+            
+            .slide-front {
+                animation: slideDown 0.3s ease-out forwards;
+                animation-delay: 0.4s;
+                opacity: 0;
+            }
+            
+            .slide-middle {
+                animation: slideDown 0.6s ease-out forwards;
+                animation-delay: 0.5s;
+                opacity: 0;
+            }
+            
+            .slide-back {
+                animation: slideDown 0.8s ease-out forwards;
+                animation-delay: 0.5s;
+                opacity: 0;
+            }
+        </style>
+    </head>
+
+    <body cz-shortcut-listen="true">
+        <div id="root">
+            <div class="relative h-screen w-full overflow-y-auto overflow-x-hidden">
+                <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url(/assets/background.png);"></div>
+                <div class="relative z-10 flex min-h-full flex-col items-center justify-center px-0 md:px-4 py-6 md:py-8">
+                    <div class="flex-shrink-0 mb-8 md:mb-12 lg:mb-16">
+                        <img src="/assets/logo.png" alt="Ugly Friends • Coming Soon" class="h-auto w-44 sm:w-48 md:w-52 lg:w-64 max-h-[15vh] object-contain">
+                    </div>
+                    <div class="relative w-full flex justify-center items-end max-w-full sm:max-w-3xl md:max-w-5xl mx-auto flex-shrink mb-4 md:mb-6">
+                        <img src="/assets/characters-back.png" alt="Background characters" class="z-10 slide-back max-h-[40vh] md:max-h-[45vh] object-contain">
+                        <img src="/assets/characters-middle.png" alt="Middle layer characters" class="absolute z-20 slide-middle max-h-[40vh] md:max-h-[45vh] object-contain">
+                        <img src="/assets/characters-front.png" alt="Main character - Pink pig with cap" class="absolute z-30 slide-front max-h-[40vh] md:max-h-[45vh] object-contain">
+                    </div>
+                    <div class="relative z-20 w-full max-w-3xl px-4 flex-shrink-0 mb-6 md:mb-8">
+                        <form action="https://app.kit.com/forms/8927290/subscriptions" class="seva-form formkit-form" method="post">
+                            <div class="flex flex-col md:flex-row items-stretch md:items-center gap-3 md:rounded-full md:p-3 md:backdrop-blur-sm md:shadow-xl" style="background-color: transparent; --md-bg: rgba(42, 147, 134, 0.37);">
+                                <style>
+                                    @media (min-width: 768px) {
+                                        [style*="--md-bg"] {
+                                            background-color: var(--md-bg) !important;
+                                        }
+                                    }
+                                </style>
+                                <input type="email" placeholder="Your email address..." required="" class="formkit-input flex-1 rounded-full border-0 bg-white px-6 py-4 text-base font-normal text-foreground placeholder:text-muted-foreground focus:outline-none shadow-lg md:shadow-none md:px-8 md:py-5 md:text-lg" name="email_address" aria-label="Email Address">
+                                <button type="submit" class="whitespace-nowrap rounded-full bg-primary px-8 py-4 text-base font-bold uppercase tracking-wide text-primary-foreground shadow-lg transition-all duration-200 hover:scale-105 hover:shadow-xl active:scale-95 md:px-10 md:py-5 md:text-lg">Notify me!</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
